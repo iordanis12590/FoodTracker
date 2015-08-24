@@ -37,16 +37,13 @@
                                     <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tWX-f6-6RV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPl-PV-zdk">
-                                <rect key="frame" x="16" y="68" width="88" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Pfr-PZ-oHn"/>
-                                    <constraint firstAttribute="width" constant="88" id="cXb-nd-heV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-59-AGv">
+                                <rect key="frame" x="132" y="173" width="337" height="337"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RBs-Lo-f4h" appends="YES" id="tT5-Om-aiw"/>
+                                </connections>
+                            </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="k3t-0j-NRP" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                 <rect key="frame" x="183" y="518" width="234" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,28 +55,32 @@
                                     <constraint firstAttribute="height" constant="57" id="k9o-tb-PsS"/>
                                 </constraints>
                             </view>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-59-AGv">
-                                <rect key="frame" x="132" y="173" width="337" height="337"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="RBs-Lo-f4h" appends="YES" id="tT5-Om-aiw"/>
-                                </connections>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPl-PV-zdk">
+                                <rect key="frame" x="256" y="28" width="88" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="8ir-OO-iEH"/>
+                                    <constraint firstAttribute="height" constant="21" id="qmP-hQ-7PZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bPl-PV-zdk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7Ra-fE-63v"/>
                             <constraint firstItem="aDB-02-nWI" firstAttribute="leading" secondItem="bqz-1H-ZoD" secondAttribute="leading" id="EIv-g7-EoS"/>
+                            <constraint firstItem="bqz-1H-ZoD" firstAttribute="top" secondItem="bPl-PV-zdk" secondAttribute="bottom" constant="48" id="RdL-aO-HeO"/>
                             <constraint firstItem="k3t-0j-NRP" firstAttribute="top" secondItem="QOl-59-AGv" secondAttribute="bottom" constant="16" id="ScV-qe-e4J"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QOl-59-AGv" secondAttribute="bottom" constant="76" id="UwU-xw-yrX"/>
-                            <constraint firstItem="bqz-1H-ZoD" firstAttribute="leading" secondItem="bPl-PV-zdk" secondAttribute="leading" id="dbX-Po-vyB"/>
+                            <constraint firstItem="bPl-PV-zdk" firstAttribute="centerX" secondItem="bqz-1H-ZoD" secondAttribute="centerX" id="XsQ-1r-uqM"/>
                             <constraint firstItem="aDB-02-nWI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eO5-jK-lpm"/>
                             <constraint firstItem="QOl-59-AGv" firstAttribute="trailing" secondItem="bqz-1H-ZoD" secondAttribute="trailing" id="hZU-6F-k9F"/>
+                            <constraint firstItem="bPl-PV-zdk" firstAttribute="centerX" secondItem="QOl-59-AGv" secondAttribute="centerX" id="hmh-Oo-gN6"/>
                             <constraint firstItem="k3t-0j-NRP" firstAttribute="centerX" secondItem="QOl-59-AGv" secondAttribute="centerX" id="jNx-DB-zuC"/>
                             <constraint firstItem="aDB-02-nWI" firstAttribute="top" secondItem="bqz-1H-ZoD" secondAttribute="bottom" constant="8" symbolic="YES" id="mHC-UI-pm6"/>
-                            <constraint firstItem="bqz-1H-ZoD" firstAttribute="top" secondItem="bPl-PV-zdk" secondAttribute="bottom" constant="8" symbolic="YES" id="oP8-dG-B7w"/>
                             <constraint firstItem="QOl-59-AGv" firstAttribute="leading" secondItem="aDB-02-nWI" secondAttribute="leading" id="sPr-MF-0zH"/>
                             <constraint firstItem="bqz-1H-ZoD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tAb-cw-9JH"/>
-                            <constraint firstItem="bPl-PV-zdk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="y2p-Q0-Taj"/>
                             <constraint firstItem="QOl-59-AGv" firstAttribute="top" secondItem="aDB-02-nWI" secondAttribute="bottom" constant="8" symbolic="YES" id="zbe-cd-bab"/>
                         </constraints>
                     </view>
